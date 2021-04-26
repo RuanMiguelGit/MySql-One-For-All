@@ -83,8 +83,8 @@ Normalize uma tabela na terceira forma normal e acesse as informações desta ta
 
 ## Data de Entrega
 
-  - Serão `X` dias de projeto.
-  - Data de entrega para avaliação final do projeto: `DD/MM/YYYY - 14:00h`.
+  - Será `1` dia de projeto.
+  - Data de entrega para avaliação final do projeto: `04/05/2021 - 14:00h`.
 
 ---
 
