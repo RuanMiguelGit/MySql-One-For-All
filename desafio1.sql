@@ -55,17 +55,20 @@ CREATE TABLE historico_cancoes (
     PRIMARY KEY (`id` , `informacao_do_plano_id`)
 )  ENGINE=INNODB;
 
-CREATE TABLE seguindo_artistas(
+CREATE TABLE seguindo_artistas (
     id INT NOT NULL,
-    seguindo_name VARCHAR(100) NOT NULL, 
+    seguindo_name VARCHAR(100) NOT NULL,
     informacao_do_plano_id INT NOT NULL,
-    FOREIGN KEY (informacao_do_plano_id) REFERENCES informacao_do_plano(id),
+    FOREIGN KEY (informacao_do_plano_id)
+        REFERENCES informacao_do_plano (id),
     usuario_dados_id INT NOT NULL,
-    FOREIGN KEY (usuario_dados_id) REFERENCES usuario_dados(id),
+    FOREIGN KEY (usuario_dados_id)
+        REFERENCES usuario_dados (id),
     artistas_id INT NOT NULL,
-    FOREIGN KEY (artistas_id) REFERENCES artistas(id), 
-	PRIMARY KEY (`id` , `informacao_do_plano_id`)
-) engine = InnoDB;
+    FOREIGN KEY (artistas_id)
+        REFERENCES artistas (id),
+    PRIMARY KEY (`id` , `informacao_do_plano_id`)
+)  ENGINE=INNODB;
 
 INSERT INTO informacao_do_plano (id, plano_name, valor_plano)
 VALUES
