@@ -5,13 +5,13 @@ CREATE DATABASE SpotifyClone;
 USE SpotifyClone;
 
 CREATE TABLE informacao_do_plano(
-	id INT PRIMARY KEY NOT NULL,
+    id INT PRIMARY KEY NOT NULL,
     plano_name VARCHAR(100) NOT NULL, 
     valor_plano DECIMAL(3,2) NOT NULL
 ) engine = InnoDB;
 
 CREATE TABLE usuario_dados(
-	id INT PRIMARY KEY NOT NULL ,
+    id INT PRIMARY KEY NOT NULL ,
     usuario_name VARCHAR(100) NOT NULL,
     idade INT NOT NULL,
     informacao_do_plano_id INT NOT NULL,
@@ -20,42 +20,42 @@ CREATE TABLE usuario_dados(
 
 
 CREATE TABLE historico_cancoes(
-	id INT PRIMARY KEY NOT NULL,
+    id INT PRIMARY KEY NOT NULL,
     historico_cancoes_name VARCHAR(100) NOT NULL, 
-	informacao_do_plano_id INT NOT NULL,
+    informacao_do_plano_id INT NOT NULL,
     FOREIGN KEY (informacao_do_plano_id) REFERENCES informacao_do_plano(id),
-	usuario_dados_id INT NOT NULL,
+    usuario_dados_id INT NOT NULL,
     FOREIGN KEY (usuario_dados_id) REFERENCES usuario_dados(id)
 ) engine = InnoDB;
 
 
 CREATE TABLE artistas(
-	id INT PRIMARY KEY NOT NULL,
+    id INT PRIMARY KEY NOT NULL,
     artistas_name VARCHAR(100) NOT NULL
 ) engine = InnoDB;
 
 
 CREATE TABLE album(
-	id INT PRIMARY KEY NOT NULL,
+    id INT PRIMARY KEY NOT NULL,
     album_name VARCHAR(100) NOT NULL, 
-	artistas_id INT NOT NULL,
+    artistas_id INT NOT NULL,
     FOREIGN KEY (artistas_id) REFERENCES artistas(id)
 ) engine = InnoDB;
 
 CREATE TABLE cancoes(
-	id INT PRIMARY KEY NOT NULL,
+    id INT PRIMARY KEY NOT NULL,
     cancoes_name VARCHAR(100) NOT NULL, 
-	album_id INT NOT NULL,
+    album_id INT NOT NULL,
     FOREIGN KEY (album_id) REFERENCES album(id),
-	artistas_id INT NOT NULL,
+    artistas_id INT NOT NULL,
     FOREIGN KEY (artistas_id) REFERENCES artistas(id)
 ) engine = InnoDB;
 
 
 CREATE TABLE seguindo_artistas(
-	id INT PRIMARY KEY NOT NULL,
+    id INT PRIMARY KEY NOT NULL,
     seguindo_name VARCHAR(100) NOT NULL, 
-	informacao_do_plano_id INT NOT NULL,
+    informacao_do_plano_id INT NOT NULL,
     FOREIGN KEY (informacao_do_plano_id) REFERENCES informacao_do_plano(id),
     usuario_dados_id INT NOT NULL,
     FOREIGN KEY (usuario_dados_id) REFERENCES usuario_dados(id),
@@ -65,16 +65,16 @@ CREATE TABLE seguindo_artistas(
 
 INSERT INTO informacao_do_plano (id, plano_name, valor_plano)
 VALUES
-  ( 1, 'Gratuito', 0 ),
-  ( 2, 'Famniliar', 7.99 ),
-  ( 3, 'Universitatio', 5.99);
+( 1, 'Gratuito', 0 ),
+( 2, 'Famniliar', 7.99 ),
+( 3, 'Universitatio', 5.99);
 
 INSERT INTO usuario_dados (id, usuario_name, idade, informacao_do_plano_id)
 VALUES
-  ( 1, 'Thati', 23, 1 ),
-  ( 2, 'Cintia', 35, 2 ),
-  ( 3, 'Bill', 20, 3 ),
-  ( 4, 'Roger', 45, 1 );
+( 1, 'Thati', 23, 1 ),
+( 2, 'Cintia', 35, 2 ),
+( 3, 'Bill', 20, 3 ),
+( 4, 'Roger', 45, 1 );
   
   INSERT INTO  historico_cancoes(id, historico_cancoes_name, informacao_do_plano_id, usuario_dados_id )
 VALUES
@@ -89,10 +89,10 @@ VALUES
 
 INSERT INTO artistas (id, artistas_name)
 VALUES
-  ( 1, 'Walter Phoenix'),
-  ( 2, 'Peter Strong'),
-  ( 3, 'Lance Day'),
-  ( 4, 'Freedie Shannon');
+( 1, 'Walter Phoenix'),
+( 2, 'Peter Strong'),
+( 3, 'Lance Day'),
+( 4, 'Freedie Shannon');
   
   INSERT INTO album (id, album_name, artistas_id )
 VALUES
