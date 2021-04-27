@@ -50,7 +50,6 @@ CREATE TABLE historico_cancoes(
     cancoes_id INT NOT NULL,
     FOREIGN KEY (cancoes_id) REFERENCES cancoes(id),
 	PRIMARY KEY (`id`,`informacao_do_plano_id`)
-
 ) engine = InnoDB;
 
 CREATE TABLE seguindo_artistas(
