@@ -102,7 +102,7 @@ VALUES
 (4,	'Incandescent',3),
 (5,	'Temporary Culture'	,4);
 
- INSERT INTO cancoes (album_id, cancoes_name, id, artistas_id )
+  INSERT INTO cancoes (album_id, cancoes_name, id, artistas_id )
 VALUES
 (1, 'Soul For us', 1, 1),
 (1, 'Reflections OF magic', 2,1),
