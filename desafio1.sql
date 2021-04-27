@@ -18,17 +18,6 @@ CREATE TABLE usuario_dados(
     FOREIGN KEY (informacao_do_plano_id) REFERENCES informacao_do_plano(id)
 ) engine = InnoDB;
 
-
-CREATE TABLE historico_cancoes(
-    id INT PRIMARY KEY NOT NULL,
-    historico_cancoes_name VARCHAR(100) NOT NULL, 
-    informacao_do_plano_id INT NOT NULL,
-    FOREIGN KEY (informacao_do_plano_id) REFERENCES informacao_do_plano(id),
-    usuario_dados_id INT NOT NULL,
-    FOREIGN KEY (usuario_dados_id) REFERENCES usuario_dados(id)
-) engine = InnoDB;
-
-
 CREATE TABLE artistas(
     id INT PRIMARY KEY NOT NULL,
     artistas_name VARCHAR(100) NOT NULL
@@ -50,6 +39,20 @@ CREATE TABLE cancoes(
     artistas_id INT NOT NULL,
     FOREIGN KEY (artistas_id) REFERENCES artistas(id)
 ) engine = InnoDB;
+
+CREATE TABLE historico_cancoes(
+    id INT PRIMARY KEY NOT NULL,
+    historico_cancoes_name VARCHAR(100) NOT NULL, 
+    informacao_do_plano_id INT NOT NULL,
+    FOREIGN KEY (informacao_do_plano_id) REFERENCES informacao_do_plano(id),
+    usuario_dados_id INT NOT NULL,
+    FOREIGN KEY (usuario_dados_id) REFERENCES usuario_dados(id),
+	cancoes_id INT NOT NULL,
+    FOREIGN KEY (cancoes_id) REFERENCES cancoes(id)
+) engine = InnoDB;
+
+
+
 
 
 CREATE TABLE seguindo_artistas(
@@ -76,22 +79,7 @@ VALUES
 ( 3, 'Bill', 20, 3 ),
 ( 4, 'Roger', 45, 1 );
   
-INSERT INTO  historico_cancoes(id, historico_cancoes_name, informacao_do_plano_id, usuario_dados_id, cancoes_id )
-VALUES
-(1,'Soul For us', 1, 1, 1),
-(2,'Magic Circus', 1, 1, 6),
-(3,'Diamond power', 1, 1, 14),
-(4,'Thang OF thunder', 1, 16),
-(5,'Home forever', 2,2, 13),
-(6,'Words of her life', 2,2, 17),
-(7,'Reflecrtions of magic', 2,2, 2),
-(8,'Honey, Lets Be Silly',2,2, 15),
-(9,'Troubles Of My Inner Fire',3,3, 4),
-(10,'Thang Of Thunder', 3,3, 16),
-(11,'Magic Circus', 3,3, 6 ),
-(12,'Dance With Her Own',1,4, 3),
-(13,'Without My Streets', 1, 4, 18),
-(14,'Celebration Of More',1,4, 11);
+
 
 INSERT INTO artistas (id, artistas_name)
 VALUES
@@ -108,7 +96,7 @@ VALUES
 (4,	'Incandescent',3),
 (5,	'Temporary Culture'	,4);
 
-INSERT INTO cancoes (album_id, cancoes_name, id, artistas_id )
+INSERT INTO cancoes(album_id, cancoes_name, id, artistas_id )
 VALUES
 (1, 'Soul For us', 1, 1),
 (1, 'Reflections OF magic', 2,1),
@@ -129,6 +117,23 @@ VALUES
 (5, 'Words Of Her Life', 17,4),
 (5,  'Without My Streets',18,4);
 
+
+INSERT INTO  historico_cancoes(id, historico_cancoes_name, informacao_do_plano_id, usuario_dados_id, cancoes_id )
+VALUES
+(1,'Soul For us', 1, 1, 1),
+(2,'Magic Circus', 1, 1, 6),
+(3,'Diamond power', 1, 1, 14),
+(4,'Thang OF thunder',1, 1, 16),
+(5,'Home forever', 2,2, 13),
+(6,'Words of her life', 2,2, 17),
+(7,'Reflecrtions of magic', 2,2, 2),
+(8,'Honey, Lets Be Silly',2,2, 15),
+(9,'Troubles Of My Inner Fire',3,3, 4),
+(10,'Thang Of Thunder', 3,3, 16),
+(11,'Magic Circus', 3,3, 6 ),
+(12,'Dance With Her Own',1,4, 3),
+(13,'Without My Streets', 1, 4, 18),
+(14,'Celebration Of More',1,4, 11);
 
 INSERT INTO seguindo_artistas (id, seguindo_name, informacao_do_plano_id,  usuario_dados_id, artistas_id)
 VALUES
