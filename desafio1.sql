@@ -40,17 +40,20 @@ CREATE TABLE cancoes(
     FOREIGN KEY (artistas_id) REFERENCES artistas(id)
 ) engine = InnoDB;
 
-CREATE TABLE historico_cancoes(
-    id INT  NOT NULL,
-    historico_cancoes_name VARCHAR(100) NOT NULL, 
+CREATE TABLE historico_cancoes (
+    id INT NOT NULL,
+    historico_cancoes_name VARCHAR(100) NOT NULL,
     informacao_do_plano_id INT NOT NULL,
-    FOREIGN KEY (informacao_do_plano_id) REFERENCES informacao_do_plano(id),
+    FOREIGN KEY (informacao_do_plano_id)
+        REFERENCES informacao_do_plano (id),
     usuario_dados_id INT NOT NULL,
-    FOREIGN KEY (usuario_dados_id) REFERENCES usuario_dados(id),
+    FOREIGN KEY (usuario_dados_id)
+        REFERENCES usuario_dados (id),
     cancoes_id INT NOT NULL,
-    FOREIGN KEY (cancoes_id) REFERENCES cancoes(id),
-	PRIMARY KEY (`id`,`informacao_do_plano_id`)
-) engine = InnoDB;
+    FOREIGN KEY (cancoes_id)
+        REFERENCES cancoes (id),
+    PRIMARY KEY (`id` , `informacao_do_plano_id`)
+)  ENGINE=INNODB;
 
 CREATE TABLE seguindo_artistas(
     id INT PRIMARY KEY NOT NULL,
