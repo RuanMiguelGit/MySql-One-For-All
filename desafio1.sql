@@ -76,16 +76,22 @@ VALUES
 ( 3, 'Bill', 20, 3 ),
 ( 4, 'Roger', 45, 1 );
   
-  INSERT INTO  historico_cancoes(id, historico_cancoes_name, informacao_do_plano_id, usuario_dados_id )
+INSERT INTO  historico_cancoes(id, historico_cancoes_name, informacao_do_plano_id, usuario_dados_id )
 VALUES
-(1,'Freedie Shannon',1, 1),
-(2,'Lance Day',1,1),
-(3,'Walter Phoenix',1,1),
-(4,'Walter Phoenix',2,2),
-(5,'Lance Day',2,2),
-(6,'Walter Phoenix',3,3),
-(7,'Peter Strong',3,3),
-(8,'Freedie Shannon',1,4);
+(1,'Soul For us', 1, 1),
+(2,'Magic Circus', 1, 1),
+(3,'Diamond power', 1, 1),
+(4,'Thang OF thunder', 1, 1),
+(5,'Home forever', 2,2),
+(6,'Words of her life', 2,2),
+(7,'Reflecrtions of magic', 2,2),
+(8,'Honey, Lets Be Silly',2,2),
+(9,'Troubles Of My Inner Fire',3,3),
+(10,'Thang Of Thunder', 3,3),
+(11,'Magic Circus', 3,3 ),
+(12,'Dance With Her Own',1,4),
+(13,'Without My Streets', 1, 4),
+(14,'Celebration Of More',1,4);
 
 INSERT INTO artistas (id, artistas_name)
 VALUES
@@ -94,7 +100,7 @@ VALUES
 ( 3, 'Lance Day'),
 ( 4, 'Freedie Shannon');
   
-  INSERT INTO album (id, album_name, artistas_id )
+INSERT INTO album (id, album_name, artistas_id )
 VALUES
 (1,	'Envious',1),
 (2, 'Exuberant',1),
@@ -102,7 +108,7 @@ VALUES
 (4,	'Incandescent',3),
 (5,	'Temporary Culture'	,4);
 
-  INSERT INTO cancoes (album_id, cancoes_name, id, artistas_id )
+INSERT INTO cancoes (album_id, cancoes_name, id, artistas_id )
 VALUES
 (1, 'Soul For us', 1, 1),
 (1, 'Reflections OF magic', 2,1),
@@ -110,20 +116,19 @@ VALUES
 (2,'Troubles Of My Inner Fire',4,1),
 (2, 'Time Fireworks',5,1),
 (3, 'Magic Circus', 6,2),
-(3, 'Honey, So DO I', 7,2),  
-(3, 'Sweetie',8,2),
-(3, 'Let’s Go Wild',9,2),
-(3, 'She knows', 10,2),
-(4, 'Fantasy For Me', 11, 3),
-(4, 'Celebration Of More',12, 3),
-(4, 'Rock his Everything',13,3),
-(4, 'Home Forever',14,3),
-(4, 'Diamond Power',15,3),
-(4, 'Honey lets be silly',16,3),
-(5, 'Thang Of Thunder', 17, 4),
-(5, 'Words Of Her Life', 18,4),
-(5,  'Without My Streets',19,4),
-(4, 'Lets be silly',20,3);
+(3, ' Honey, So DO I', 7, 2),
+(3, 'Sweetie lets go Wild',8,2),
+(3, 'She knows', 9,2),
+(4, 'Fantasy For Me', 10, 3),
+(4, 'Celebration Of More',11, 3),
+(4, 'Rock his Everything',12,3),
+(4, 'Home Forever',13,3),
+(4, 'Diamond Power',14,3),
+(4, 'Honey, Lets Be Silly',15,3),
+(5, 'Thang Of Thunder', 16, 4),
+(5, 'Words Of Her Life', 17,4),
+(5,  'Without My Streets',18,4),
+
 
 INSERT INTO seguindo_artistas (id, seguindo_name, informacao_do_plano_id,  usuario_dados_id, artistas_id)
 VALUES
