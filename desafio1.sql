@@ -78,20 +78,20 @@ VALUES
   
 INSERT INTO  historico_cancoes(id, historico_cancoes_name, informacao_do_plano_id, usuario_dados_id )
 VALUES
-(1,'Soul For us', 1, 1),
-(2,'Magic Circus', 1, 1),
-(3,'Diamond power', 1, 1),
-(4,'Thang OF thunder', 1, 1),
-(5,'Home forever', 2,2),
-(6,'Words of her life', 2,2),
-(7,'Reflecrtions of magic', 2,2),
-(8,'Honey, Lets Be Silly',2,2),
-(9,'Troubles Of My Inner Fire',3,3),
-(10,'Thang Of Thunder', 3,3),
-(11,'Magic Circus', 3,3 ),
-(12,'Dance With Her Own',1,4),
-(13,'Without My Streets', 1, 4),
-(14,'Celebration Of More',1,4);
+(1,'Soul For us', 1, 1, 1),
+(2,'Magic Circus', 1, 1, 6),
+(3,'Diamond power', 1, 1, 14),
+(4,'Thang OF thunder', 1, 16),
+(5,'Home forever', 2,2, 13),
+(6,'Words of her life', 2,2, 17),
+(7,'Reflecrtions of magic', 2,2, 2),
+(8,'Honey, Lets Be Silly',2,2, 15),
+(9,'Troubles Of My Inner Fire',3,3, 4),
+(10,'Thang Of Thunder', 3,3, 16),
+(11,'Magic Circus', 3,3, 6 ),
+(12,'Dance With Her Own',1,4, 3),
+(13,'Without My Streets', 1, 4, 18),
+(14,'Celebration Of More',1,4, 11);
 
 INSERT INTO artistas (id, artistas_name)
 VALUES
