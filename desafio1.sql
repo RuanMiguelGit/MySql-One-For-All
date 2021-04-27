@@ -127,7 +127,7 @@ VALUES
 (4, 'Honey, Lets Be Silly',15,3),
 (5, 'Thang Of Thunder', 16, 4),
 (5, 'Words Of Her Life', 17,4),
-(5,  'Without My Streets',18,4),
+(5,  'Without My Streets',18,4);
 
 
 INSERT INTO seguindo_artistas (id, seguindo_name, informacao_do_plano_id,  usuario_dados_id, artistas_id)
