@@ -47,7 +47,7 @@ CREATE TABLE historico_cancoes(
     FOREIGN KEY (informacao_do_plano_id) REFERENCES informacao_do_plano(id),
     usuario_dados_id INT NOT NULL,
     FOREIGN KEY (usuario_dados_id) REFERENCES usuario_dados(id),
-	cancoes_id INT NOT NULL,
+    cancoes_id INT NOT NULL,
     FOREIGN KEY (cancoes_id) REFERENCES cancoes(id)
 ) engine = InnoDB;
 
