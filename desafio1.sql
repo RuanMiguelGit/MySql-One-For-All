@@ -76,7 +76,7 @@ VALUES
 ( 3, 'Bill', 20, 3 ),
 ( 4, 'Roger', 45, 1 );
   
-INSERT INTO  historico_cancoes(id, historico_cancoes_name, informacao_do_plano_id, usuario_dados_id )
+INSERT INTO  historico_cancoes(id, historico_cancoes_name, informacao_do_plano_id, usuario_dados_id, cancoes_id )
 VALUES
 (1,'Soul For us', 1, 1, 1),
 (2,'Magic Circus', 1, 1, 6),
