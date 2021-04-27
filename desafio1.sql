@@ -63,7 +63,8 @@ CREATE TABLE seguindo_artistas(
     usuario_dados_id INT NOT NULL,
     FOREIGN KEY (usuario_dados_id) REFERENCES usuario_dados(id),
     artistas_id INT NOT NULL,
-    FOREIGN KEY (artistas_id) REFERENCES artistas(id) 
+    FOREIGN KEY (artistas_id) REFERENCES artistas(id), 
+	PRIMARY KEY (`id` , `informacao_do_plano_id`)
 ) engine = InnoDB;
 
 INSERT INTO informacao_do_plano (id, plano_name, valor_plano)
