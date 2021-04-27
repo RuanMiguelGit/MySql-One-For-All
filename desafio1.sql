@@ -56,7 +56,7 @@ CREATE TABLE historico_cancoes (
 )  ENGINE=INNODB;
 
 CREATE TABLE seguindo_artistas(
-    id INT PRIMARY KEY NOT NULL,
+    id INT NOT NULL,
     seguindo_name VARCHAR(100) NOT NULL, 
     informacao_do_plano_id INT NOT NULL,
     FOREIGN KEY (informacao_do_plano_id) REFERENCES informacao_do_plano(id),
