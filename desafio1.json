@@ -1,16 +1,16 @@
 {
   "coluna_usuario": "usuario_name",
-  "tabela_que_contem_usuario": "usuari",
+  "tabela_que_contem_usuario": "usuario_dados",
   "coluna_plano": "plano_name",
-  "tabela_que_contem_plano": "plan",
+  "tabela_que_contem_plano": "informacao_do_plano",
   "coluna_historico_de_reproducoes": "historico_cancoes_name",
-  "tabela_que_contem_historico_de_reproducoes": "historico_cancoe",
-  "coluna_seguindo_artistas": "seguindo_artista_name",
-  "tabela_que_contem_seguindo_artistas": "seguindo_artista",
+  "tabela_que_contem_historico_de_reproducoes": "historico_cancoes",
+  "coluna_seguindo_artistas": "seguindo_name",
+  "tabela_que_contem_seguindo_artistas": "seguindo_artistas",
   "coluna_artista": "artistas_name",
-  "tabela_que_contem_artista": "artista",
+  "tabela_que_contem_artista": "artistas",
   "coluna_album": "album_name",
-  "tabela_que_contem_album": "albu",
+  "tabela_que_contem_album": "album",
   "coluna_cancoes": "cancoes_name",
-  "tabela_que_contem_cancoes": "cancoe"
+  "tabela_que_contem_cancoes": "cancoes"
 }

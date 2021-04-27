@@ -4,45 +4,45 @@ CREATE DATABASE SpotifyClone;
 
 USE SpotifyClone;
 
-CREATE TABLE plan(
+CREATE TABLE informacao_do_plano(
 	id INT PRIMARY KEY NOT NULL,
     plano_name VARCHAR(100) NOT NULL, 
     valor_plano DECIMAL(3,2) NOT NULL
 ) engine = InnoDB;
 
-CREATE TABLE usuari(
+CREATE TABLE usuario_dados(
 	id INT PRIMARY KEY NOT NULL ,
     usuario_name VARCHAR(100) NOT NULL,
     idade INT NOT NULL,
-    plano_id INT NOT NULL,
-    FOREIGN KEY (plano_id) REFERENCES plano(id)
+    informacao_do_plano_id INT NOT NULL,
+    FOREIGN KEY (informacao_do_plano_id) REFERENCES informacao_do_plano(id)
 ) engine = InnoDB;
 
 
-CREATE TABLE historico_cancoe(
+CREATE TABLE historico_cancoes(
 	id INT PRIMARY KEY NOT NULL,
     historico_cancoes_name VARCHAR(100) NOT NULL, 
-	plano_id INT NOT NULL,
-    FOREIGN KEY (plano_id) REFERENCES plano(id),
-	usuario_id INT NOT NULL,
-    FOREIGN KEY (usuario_id) REFERENCES usuario (id)
+	informacao_do_plano_id INT NOT NULL,
+    FOREIGN KEY (informacao_do_plano_id) REFERENCES informacao_do_plano(id),
+	usuario_dados_id INT NOT NULL,
+    FOREIGN KEY (usuario_dados_id) REFERENCES usuario_dados(id)
 ) engine = InnoDB;
 
 
-CREATE TABLE artista(
+CREATE TABLE artistas(
 	id INT PRIMARY KEY NOT NULL,
     artistas_name VARCHAR(100) NOT NULL
 ) engine = InnoDB;
 
 
-CREATE TABLE albu(
+CREATE TABLE album(
 	id INT PRIMARY KEY NOT NULL,
     album_name VARCHAR(100) NOT NULL, 
 	artistas_id INT NOT NULL,
     FOREIGN KEY (artistas_id) REFERENCES artistas(id)
 ) engine = InnoDB;
 
-CREATE TABLE cancoe(
+CREATE TABLE cancoes(
 	id INT PRIMARY KEY NOT NULL,
     cancoes_name VARCHAR(100) NOT NULL, 
 	album_id INT NOT NULL,
@@ -52,31 +52,31 @@ CREATE TABLE cancoe(
 ) engine = InnoDB;
 
 
-CREATE TABLE seguindo_artista(
+CREATE TABLE seguindo_artistas(
 	id INT PRIMARY KEY NOT NULL,
     seguindo_name VARCHAR(100) NOT NULL, 
-	plano_id INT NOT NULL,
-    FOREIGN KEY (plano_id) REFERENCES plano(id),
-	usuario_id INT NOT NULL,
-    FOREIGN KEY (usuario_id) REFERENCES usuario(id),
+	informacao_do_plano_id INT NOT NULL,
+    FOREIGN KEY (informacao_do_plano_id) REFERENCES informacao_do_plano(id),
+    usuario_dados_id INT NOT NULL,
+    FOREIGN KEY (usuario_dados_id) REFERENCES usuario_dados(id),
     artistas_id INT NOT NULL,
     FOREIGN KEY (artistas_id) REFERENCES artistas(id)
 ) engine = InnoDB;
 
-INSERT INTO plan (id, plano_name, valor_plano)
+INSERT INTO informacao_do_plano (id, plano_name, valor_plano)
 VALUES
   ( 1, 'Gratuito', 0 ),
   ( 2, 'Famniliar', 7.99 ),
   ( 3, 'Universitatio', 5.99);
 
-INSERT INTO usuari (id, usuario_name, idade, plano_id)
+INSERT INTO usuario_dados (id, usuario_name, idade, informacao_do_plano_id)
 VALUES
   ( 1, 'Thati', 23, 1 ),
   ( 2, 'Cintia', 35, 2 ),
   ( 3, 'Bill', 20, 3 ),
   ( 4, 'Roger', 45, 1 );
   
-  INSERT INTO  historico_cancoe(id,  historico_cancoes_name, plano_id, usuario_id )
+  INSERT INTO  historico_cancoes(id, historico_cancoes_name, informacao_do_plano_id, usuario_dados_id )
 VALUES
 (1,'Freedie Shannon',1, 1),
 (2,'Lance Day',1,1),
@@ -87,14 +87,14 @@ VALUES
 (7,'Peter Strong',3,3),
 (8,'Freedie Shannon',1,4);
 
-INSERT INTO artista(id, artistas_name)
+INSERT INTO artistas (id, artistas_name)
 VALUES
   ( 1, 'Walter Phoenix'),
   ( 2, 'Peter Strong'),
   ( 3, 'Lance Day'),
   ( 4, 'Freedie Shannon');
   
-  INSERT INTO albu(id, album_name, artistas_id )
+  INSERT INTO album (id, album_name, artistas_id )
 VALUES
 (1,	'Envious',1),
 (2, 'Exuberant',1),
@@ -102,7 +102,7 @@ VALUES
 (4,	'Incandescent',3),
 (5,	'Temporary Culture'	,4);
 
- INSERT INTO cancoe(album_id, cancoes_name, id, artistas_id )
+ INSERT INTO cancoes (album_id, cancoes_name, id, artistas_id )
 VALUES
 (1, 'Soul For us', 1, 1),
 (1, 'Reflections OF magic', 2,1),
@@ -125,7 +125,7 @@ VALUES
 (5,  'Without My Streets',19,4),
 (4, 'Lets be silly',20,3);
 
-INSERT INTO seguindo_artista(id, seguindo_name, plano_id,  usuario_id, artistas_id)
+INSERT INTO seguindo_artistas (id, seguindo_name, informacao_do_plano_id,  usuario_dados_id, artistas_id)
 VALUES
 (1,'Freedie Shannon',1,4, 4),
 (2,'Lance Day',3,3, 3),
@@ -135,4 +135,3 @@ VALUES
 (6,'Walter Phoenix',1,1,1),
 (7,'Peter Strong',2,2,2),
 (8,'Freedie Shannon',1,4,4);
-
