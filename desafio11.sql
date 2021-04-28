@@ -9,4 +9,5 @@ CREATE VIEW cancoes_premium AS
     WHERE
         plano_name IN ('Familiar' , 'Universitário')
     GROUP BY nome
-    ORDER BY nome ASC; 
+    ORDER BY nome 
+    ASC; 
