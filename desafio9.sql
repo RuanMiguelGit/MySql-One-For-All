@@ -7,4 +7,5 @@ INNER JOIN SpotifyClone.album AS AL
 ON A.id = AL.artistas_id
 WHERE A.artistas_name = aname;
 END $$
-DELIMITER ;
+DELIMITER 
+;
