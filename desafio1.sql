@@ -103,7 +103,7 @@ VALUES
 INSERT INTO cancoes(album_id, cancoes_name, id, artistas_id )
 VALUES
 (1, 'Soul For Us', 1, 1),
-(1, 'Reflections OF Magic', 2,1),
+(1, 'Reflection OF Magic', 2,1),
 (1,'Dance With her Own',3,1),
 (2,'Troubles Of My Inner Fire',4,1),
 (2, 'Time Fireworks',5,1),
@@ -117,7 +117,7 @@ VALUES
 (4, 'Home Forever',13,3),
 (4, 'Diamond Power',14,3),
 (4, 'Honey, Let''s Be Silly',15,3),
-(5, 'Thang Of Thunder', 16, 4),
+(5, 'Thang of Thunder', 16, 4),
 (5, 'Words Of Her Life', 17,4),
 (5,  'Without My Streets',18,4);
 
@@ -130,10 +130,10 @@ VALUES
 (4,'Thang OF Thunder',1, 1, 16),
 (5,'Home Forever', 2,2, 13),
 (6,'Words Of Her Life', 2,2, 17),
-(7,'Reflecrtions Of Magic', 2,2, 2),
-(8,'Honey Let''s Be Silly',2,2, 15),
+(7,'Reflecrtion Of Magic', 2,2, 2),
+(8,'Honey, Let''s Be Silly',2,2, 15),
 (9,'Troubles Of My Inner Fire',3,3, 4),
-(10,'Thang Of Thunder', 3,3, 16),
+(10,'Thang of Thunder', 3,3, 16),
 (11,'Magic Circus', 3,3, 6 ),
 (12,'Dance With Her Own',1,4, 3),
 (13,'Without My Streets', 1, 4, 18),
