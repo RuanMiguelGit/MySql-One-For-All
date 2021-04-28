@@ -73,8 +73,8 @@ CREATE TABLE seguindo_artistas (
 INSERT INTO informacao_do_plano (id, plano_name, valor_plano)
 VALUES
 ( 1, 'Gratuito', 0 ),
-( 2, 'Famniliar', 7.99 ),
-( 3, 'Universitatio', 5.99);
+( 2, 'Familiar', 7.99 ),
+( 3, 'Universitário', 5.99);
 
 INSERT INTO usuario_dados (id, usuario_name, idade, informacao_do_plano_id)
 VALUES
