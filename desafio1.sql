@@ -102,21 +102,21 @@ VALUES
 
 INSERT INTO cancoes(album_id, cancoes_name, id, artistas_id )
 VALUES
-(1, 'Soul For us', 1, 1),
-(1, 'Reflections OF magic', 2,1),
+(1, 'Soul For Us', 1, 1),
+(1, 'Reflections OF Magic', 2,1),
 (1,'Dance With her Own',3,1),
 (2,'Troubles Of My Inner Fire',4,1),
 (2, 'Time Fireworks',5,1),
 (3, 'Magic Circus', 6,2),
 (3, ' Honey, So DO I', 7, 2),
-(3, 'Sweetie lets go Wild',8,2),
+(3, 'Sweetie Let''s go Wild',8,2),
 (3, 'She knows', 9,2),
 (4, 'Fantasy For Me', 10, 3),
 (4, 'Celebration Of More',11, 3),
 (4, 'Rock his Everything',12,3),
 (4, 'Home Forever',13,3),
 (4, 'Diamond Power',14,3),
-(4, 'Honey, Lets Be Silly',15,3),
+(4, 'Honey, Let''s Be Silly',15,3),
 (5, 'Thang Of Thunder', 16, 4),
 (5, 'Words Of Her Life', 17,4),
 (5,  'Without My Streets',18,4);
@@ -124,14 +124,14 @@ VALUES
 
 INSERT INTO  historico_cancoes(id, historico_cancoes_name, informacao_do_plano_id, usuario_dados_id, cancoes_id )
 VALUES
-(1,'Soul For us', 1, 1, 1),
+(1,'Soul For Us', 1, 1, 1),
 (2,'Magic Circus', 1, 1, 6),
-(3,'Diamond power', 1, 1, 14),
-(4,'Thang OF thunder',1, 1, 16),
-(5,'Home forever', 2,2, 13),
-(6,'Words of her life', 2,2, 17),
-(7,'Reflecrtions of magic', 2,2, 2),
-(8,'Honey, Lets Be Silly',2,2, 15),
+(3,'Diamond Power', 1, 1, 14),
+(4,'Thang OF Thunder',1, 1, 16),
+(5,'Home Forever', 2,2, 13),
+(6,'Words Of Her Life', 2,2, 17),
+(7,'Reflecrtions Of Magic', 2,2, 2),
+(8,'Honey Let''s Be Silly',2,2, 15),
 (9,'Troubles Of My Inner Fire',3,3, 4),
 (10,'Thang Of Thunder', 3,3, 16),
 (11,'Magic Circus', 3,3, 6 ),
