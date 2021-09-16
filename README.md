@@ -28,8 +28,8 @@ Criar reações dinâmicas com TRIGGERS
 <ul>
   <li> Git Clone no Projeto</li>
   <li> Npm Install</li>
-  <li> Npm start</li>
- </ul>
+  <li> Inicie o MySql</li>
+  <li> Execute Cada Arquivo</li> </ul>
 
 <h2>Membros do Projeto</h2>
 <ul>
